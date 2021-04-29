@@ -1,4 +1,3 @@
-、、、
 
 傳直呼叫與參考呼叫
 
@@ -61,3 +60,4 @@ public class CallByRef {
 		p.b = t;
 	}
 }
+.md

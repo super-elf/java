@@ -9,7 +9,7 @@
 Java中有關方法的引數傳遞方式有：傳值呼叫（By Value）和參考呼叫（Call By Reference）兩種主要機制，本節將介紹這兩種引數傳遞機制的使用方式。
 
 、、、
-
+```
 package ex05;
 
 public class CallByVal {
@@ -29,3 +29,35 @@ public class CallByVal {
 	}
 }
 
+
+```
+
+參考呼叫
+
+
+package ex05;
+
+class Obj {
+	int a, b;
+
+	Obj() {
+		a = 10;
+		b = 15;
+	}
+}
+
+public class CallByRef {
+	public static void main(String[] args) {
+		Obj obj = new Obj();
+		System.out.println(" 參考呼叫前\t a = " + obj.a + "\tb = " + obj.b);
+		byRef(obj);
+		System.out.println(" 參考呼叫後\t a = " + obj.a + "\tb = " + obj.b);
+	}
+
+	static void byRef(Obj p) {
+		int t;
+		t = p.a;
+		p.a = p.b;
+		p.b = t;
+	}
+}
